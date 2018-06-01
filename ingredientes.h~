@@ -1,0 +1,24 @@
+#ifndef INGREDIENTES_H
+#define INGREDIENTES_H
+#include <iostream>
+#include <string>
+using namespace std;
+using std::string;
+
+class ingredientes{
+	protected:	
+		string nombre;
+		string tipo;
+	public:
+		ingredientes(string,string);
+		ingredientes();
+	
+	string getNombre;
+	void setNombre;
+	
+	string getTipo;
+	void setTipo;
+		
+
+};
+#endif

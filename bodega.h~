@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+#ifndef BODEGA_H
+#define BODEGA_H
+class bodega{
+	protected:
+		vector<bodega*> ingredientes;
+		vector<bodega*> cantidad;
+	public:
+		bodega(vector<bodega*>,vector<bodega*>);
+		bodega();
+		vector<bodega*> getIngredientes();
+		void setIngredientes(bodega*);
+
+		vector<bodega*> getCantidad();
+		void setCantidad(bodega*);
+
+};
+#endif

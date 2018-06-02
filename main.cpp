@@ -34,7 +34,7 @@ int main(){
 			string nombre;
 			string tipo;
 			cout<<"Ingrese el nombre del ingrediente:"<<endl;
-			cin>>nombr:we;
+			cin>>nombre;
 			cout<<"Ingrese la cantidad:"<<endl;
 			cin>>tipo;
 			b->setIngredientes(new ingredientes(nombre,tipo));	
@@ -46,7 +46,7 @@ int main(){
 		}
 		
 		if(opcion==2){
-			int cantidad;
+		int cantidad;
 		cout<<"Ingrese la cantidad de ingredientes:"<<endl;		
 		cin>>cantidad;
 				

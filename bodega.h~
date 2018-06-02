@@ -8,16 +8,16 @@ using namespace std;
 #define BODEGA_H
 class bodega{
 	protected:
-		vector<bodega*> ingredientes;
-		vector<bodega*> cantidad;
+		vector<ingredientes*> ingredientes;
+		int cantidad;
 	public:
-		bodega(vector<bodega*>,vector<bodega*>);
+		bodega(vector<ingredientes*>,int);
 		bodega();
 		vector<bodega*> getIngredientes();
-		void setIngredientes(bodega*);
+		void setIngredientes(ingredientes*);
 
-		vector<bodega*> getCantidad();
-		void setCantidad(bodega*);
+		int getCantidad();
+		void setCantidad(int);
 
 };
 #endif

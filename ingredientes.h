@@ -7,7 +7,7 @@ using namespace std;
 #ifndef INGREDIENTES_H
 #define INGREDIENTES_H
 class ingredientes{
-	protected:
+	private:
 		string nombre;
 		string tipo;
 	public:

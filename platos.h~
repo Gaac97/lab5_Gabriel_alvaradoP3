@@ -3,30 +3,30 @@
 #include <vector>
 
 using namespace std;
+using std::string;
 
 #ifndef PLATOS_H
 #define PLATOS_H
 class platos{
 	protected:
 		int cantidadIngredientes;
-		int resenaOrigen;
+		string resenaOrigen;
 		int cantidadSabor;
 		int registro;
 		int precio;
 		int valoracion;
 		int cantidadAporte;
 		int duracion;
-		int platos;
 		
 		string historialVentas;
 	public:
-		platos(int,int,int,int,int,int,int,int,string);
+		platos(int,string,int,int,int,int,int,int,string);
 		platos();
 		int getCantidadIngredientes();
 		void setCantidadIngredientes(int);
 
-		int getResenaOrigen();
-		void setResenaOrigen(int);
+		string getResenaOrigen();
+		void setResenaOrigen(string);
 
 		int getCantidadSabor();
 		void setCantidadSabor(int);

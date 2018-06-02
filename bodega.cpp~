@@ -1,16 +1,17 @@
 #include "bodega.h"
+#include "ingredientes.h"
   
-bodega::bodega(vector<bodega*> ingredientes,int cantidad){
-        this->ingredientes=ingredientes;
+bodega::bodega(vector<ingredientes*> ingrediente,int cantidad){
+        this->ingrediente=ingrediente;
         this->cantidad=cantidad;
 }
 bodega::bodega(){
 
-}void bodega::setIngredientes(bodega* Cingredientes){
-   this-> ingredientes.push_back(Cingredientes);
+}void bodega::setIngrediente(vector<ingredientes*> ingrediente){
+   this-> ingrediente.push_back(ingrediente);
 }
-vector<bodega*> bodega::getIngredientes(){
-   return ingredientes;
+vector<ingredientes*> bodega::getIngrediente(){
+   return ingrediente;
 }
 void bodega::setCantidad(int cantidad){
    this-> cantidad=cantidad;

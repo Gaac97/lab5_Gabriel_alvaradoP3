@@ -1,24 +1,23 @@
-#ifndef INGREDIENTES_H
-#define INGREDIENTES_H
 #include <iostream>
 #include <string>
-using namespace std;
-using std::string;
+#include <vector>
 
+using namespace std;
+
+#ifndef INGREDIENTES_H
+#define INGREDIENTES_H
 class ingredientes{
-	protected:	
+	private:
 		string nombre;
 		string tipo;
 	public:
 		ingredientes(string,string);
 		ingredientes();
-	
-	string getNombre;
-	void setNombre;
-	
-	string getTipo;
-	void setTipo;
-		
+		string getNombre();
+		void setNombre(string);
+
+		string getTipo();
+		void setTipo(string);
 
 };
 #endif

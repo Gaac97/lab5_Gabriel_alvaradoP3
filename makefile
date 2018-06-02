@@ -1,5 +1,5 @@
 main:    main.cpp bodega.o menu.o platos.o experiencia.o ingredientes.o 
-	g++ main.cpp bodega.o menu.o platos.o experiencia.o -o main
+	g++ main.cpp bodega.o menu.o platos.o experiencia.o ingredientes.o -o main
 main.o:	main.cpp bodega.h menu.h platos.h experiencia.h ingredientes.h
 	g++ -c main.cpp
 bodega:	bodega.cpp bodega.h

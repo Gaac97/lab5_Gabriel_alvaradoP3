@@ -1,14 +1,18 @@
 #include "platos.h"
+#include <string>
+using namespace std;
+using std::string;
 
-platos::platos(int cantidadIngredientes,int resenaOrigen,int cantidadSabor,int registro,int precio,int valoracion,int cantidadAporte,int duracion){
-	this->cantidadIngredientes=cantidad de ingredientes;
-	this->resenaOrigen=reseñaOrigen;
+platos::platos(int cantidadIngredientes,string resenaOrigen,int cantidadSabor,int registro,int precio,int valoracion,int cantidadAporte,int duracion,string historialVentas){
+	this->cantidadIngredientes=cantidadIngredientes;
+	this->resenaOrigen=resenaOrigen;
 	this->cantidadSabor=cantidadSabor;
 	this->registro=registro;
 	this->precio=precio;
 	this->valoracion=valoracion;
 	this->cantidadAporte=cantidadAporte;
 	this->duracion=duracion;
+	this->historialVentas=historialVentas;
 }
 platos::platos(){
 
@@ -18,10 +22,10 @@ platos::platos(){
 int platos::getCantidadIngredientes(){
    return cantidadIngredientes;
 }
-void platos::setResenaOrigen(int resenaOrigen){
+void platos::setResenaOrigen(string resenaOrigen){
    this-> resenaOrigen=resenaOrigen;
 }
-int platos::getResenaOrigen(){
+string platos::getResenaOrigen(){
    return resenaOrigen;
 }
 void platos::setCantidadSabor(int cantidadSabor){
@@ -59,4 +63,13 @@ void platos::setDuracion(int duracion){
 }
 int platos::getDuracion(){
    return duracion;
+}
+
+string platos::getHistorialVentas(){
+	return historialVentas;
+	}
+
+void platos::setHistorialVentas(string historialVentas){
+this->historialVentas=historialVentas;
+
 }

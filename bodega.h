@@ -1,20 +1,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "ingredientes.h"
 
 using namespace std;
 
 #ifndef BODEGA_H
 #define BODEGA_H
 class bodega{
-	protected:
-		vector<bodega*> ingredientes;
+	private:
+		vector<ingredientes*> ingrediente;
 		int cantidad;
 	public:
-		bodega(vector<bodega*>,int);
+		bodega(vector<ingredientes*>,int);
 		bodega();
-		vector<bodega*> getIngredientes();
-		void setIngredientes(bodega*);
+		vector<ingredientes*> getIngrediente();
+		void setIngrediente(ingredientes*);
 
 		int getCantidad();
 		void setCantidad(int);

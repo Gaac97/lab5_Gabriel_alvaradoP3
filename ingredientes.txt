@@ -1,0 +1,3 @@
+LISTA DE INGREDIENTES
+Nombre: bananoTIPO:6
+Nombre: carneTIPO:6

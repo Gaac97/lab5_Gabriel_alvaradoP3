@@ -1,5 +1,6 @@
 #include "ingredientes.h"
-  
+#include <iostream>
+using namespace std;
 ingredientes::ingredientes(string nombre,string tipo){
         this->nombre=nombre;
         this->tipo=tipo;

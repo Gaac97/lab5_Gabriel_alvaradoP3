@@ -7,6 +7,8 @@
 #include <vector>
 #include "ingredientes.h"
 #include "platos.h"
+#include <fstream>
+#include <stdlib.h>
 
 using namespace std;
 using std::cout;
@@ -14,6 +16,7 @@ using std::endl;
 using std::cin;
 using std::string;
 
+void escribir(vector<ingredientes*>);
 
 int main(){
      vector<bodega*>ListBodega;
@@ -24,13 +27,14 @@ int main(){
      	platos* p = new platos();
 		cout<<"Bienvenido" <<endl;  
 		int opcion=0;
-		while(opcion!=5){
+		while(opcion!=6){
 		
 		cout<<"1) ingresar ingredientes"<<endl;
 		cout<<"2) Bodega"<<endl;
 		cout<<"3) Crear Platos"<<endl;
 		cout<<"4) experiencia"<<endl;
-		cout<<"5) SAlIR"<<endl;
+		cout<<"5) Guardar en archivo de texto"<<endl;
+		cout<<"6) salir"<<endl;
 		cout<<"Ingrese una opcion"<<endl;	
 		cin>>opcion;	
 		if(opcion==1){
@@ -41,8 +45,7 @@ int main(){
 			cout<<"Ingrese el nombre del ingrediente:"<<endl;
 			cin>>nombre;
 			cout<<"Ingrese la cantidad:"<<endl;
-			cin>>tipo;
-			
+			cin>>tipo;			
 			i = new ingredientes(nombre,tipo);
 			ListIngre.push_back(i);
 		
@@ -106,6 +109,12 @@ int main(){
 		
 		}
 		
+		
+		if(opcion==5){
+		escribir(ListIngre);	//Solo escribo en el texto	
+		
+		}
+		
 			
 		}//Fin	
 		  
@@ -119,6 +128,60 @@ for(int i=0;i<lista.size();i++){
 cout<< i << lista[i].getNombre()<< endl; 
 }
 
-
 }*/
 
+
+void escribir(vector<ingredientes*> list){
+  ofstream file("ingredientes.txt");
+  if (file.is_open()) {
+    file<<"LISTA DE INGREDIENTES"<<endl;
+    for (int i = 0; i < list.size(); i++) {
+      if (dynamic_cast<ingredientes*>(list.at(i))) {
+        ingredientes* temp = dynamic_cast<ingredientes*>(list.at(i));
+        file<<"Nombre: "<<list.at(i)->getNombre()<<"TIPO:"<<list.at(i)->getTipo()<<endl;
+      	}      
+
+		}
+	
+	}
+	 file.close();
+}
+
+
+
+
+
+/*
+void cargar(){
+vector<ingredientes*>Lista;
+string contenido;
+cout <<"ingrese el nombre del archivo que quieres leer"<<endl;
+cin.ignore;
+getline(cin,contenido);
+contenido += ".txt";
+ifstream fs(contenido.c_str(), ios::in);
+char linea[200];
+long contador = OL;
+	if(fs.fail(){
+		cerr<<"El archivo no existe"<<endl;
+
+	}else{	
+	while(!fs.eof(){
+	fs.getline(linea,sizeof(linea);
+	
+	cout<<linea<<endl;
+	if((++contador%24)==0){
+	cout <<"continuar..."<<endl;	
+		cin.get();
+	
+	
+		}	
+	
+	}
+	fs.close();
+	system("pause");	
+	
+
+
+	}
+}*/
